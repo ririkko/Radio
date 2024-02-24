@@ -1,0 +1,88 @@
+/* 通常のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header,
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.player {
+    text-align: center;
+}
+
+.speaker {
+    width: 200px;
+    height: 200px;
+    background-image: url('speaker.jpg'); /* スピーカーの画像を指定してください */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0 auto 20px;
+    border-radius: 50%; /* 円形にする */
+    animation: soundWave 2s infinite linear;
+}
+
+@keyframes soundWave {
+    0% {
+        box-shadow: 0 0 0 0 rgba(51, 51, 51, 0.7); /* #333の色 */
+    }
+    50% {
+        box-shadow: 0 0 0 30px rgba(51, 51, 51, 0); /* #333の色 */
+    }
+    100% {
+        box-shadow: 0 0 0 100px rgba(51, 51, 51, 0); /* #333の色 */
+    }
+}
+
+.twitter-share-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 12px 20px; /* 上下のパディングを調整 */
+    border-radius: 30px; /* 丸みを帯びたボタン */
+    text-decoration: none;
+    text-align: center; /* テキストを中央揃え */
+    transition: background-color 0.3s ease;
+}
+
+.twitter-share-button:hover {
+    background-color: black;
+}
+
+.twitter-share-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .speaker {
+        width: 150px;
+        height: 150px;
+    }
+
+    .twitter-share-button {
+        width: 150px;
+    }
+}
+
